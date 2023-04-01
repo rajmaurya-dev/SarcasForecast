@@ -5,17 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Weather App</title>
-    <!-- bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+   {{>headlinks}}
     <!-- bootstrap CDN -->
 </head>
 
 <body>
-    {{>navbar}}
+    {{>nav}}
     <header class="jumbotron">
         <div class="container">
             <h1 class="display-3">Weather App</h1>
@@ -73,7 +68,7 @@
             We're committed to providing accurate, user-friendly, and entertaining weather forecasts that let you
             express your true feelings about the weather. Join the weather revolution and download our app today!</p>
     </div>
-
+    {{>footer}}
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper-base.min"></script>
 </body>

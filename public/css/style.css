@@ -14,6 +14,7 @@
 html {
   font-size: 62.5%;
 }
+
 .row {
   margin: 0;
 }
@@ -43,8 +44,8 @@ html {
   font-size: 2rem;
   font-weight: 700;
 }
-.btn-left-header {
-  width: 9rem;
+.btn {
+  width: 14rem;
   align-self: center;
 }
 .glass-bg {
@@ -66,5 +67,10 @@ html {
   font-size: 1.4rem;
   padding: 2rem 0;
   color: #e5138e;
+  text-align: center;
+}
+footer {
+  background-color: #e5138e;
+  padding: 1rem 0;
   text-align: center;
 }

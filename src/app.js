@@ -6,16 +6,18 @@ const port = 8000;
 
 //! Public path
 const publicStaticPath = path.join(__dirname, "../public");
-app.use(express.static(publicStaticPath));
 
 const views_Path = path.join(__dirname, "../template/views");
 const partials_Path = path.join(__dirname, "../template/partials");
-console.log("Hey");
-// console.log(partials_Path);
-// console.log(views_Path);
-app.set("views", views_Path);
+// const templatePath = path.join(__dirname, "../template/views");
+// const partialsPath = path.join(__dirname, "../template/partials");
+app.use(express.static(publicStaticPath));
+
 app.set("view engine", "hbs");
-// hbs.registerPartial(partials_Path);
+app.set("views", views_Path);
+hbs.registerPartials(partials_Path);
+// app.set("views", templatePath);
+// hbs.registerPartials(partialsPath);
 
 //! Routing
 app.get("/", (req, res) => {
@@ -29,7 +31,7 @@ app.get("/about", (req, res) => {
   res.render("about");
 });
 app.get("*", (req, res) => {
-  res.render("404error");
+  res.render("error");
 });
 
 app.listen(port, () => {
