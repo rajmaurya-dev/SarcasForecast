@@ -5,17 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather Checking Page</title>
   {{>headlinks}}
+  <script src="js/moment.js"></script>
 </head>
 <body>
   {{>nav}}
-  <div style="height: 70vh;" class="container my-5">
+  <div style="height: 75vh;" class="container my-5">
     <h1 class="text-center">Weather Checking Page</h1>
     <div class="row my-5">
       <div class="col-md-6 offset-md-3">
         <div class="input-group mb-3">
-          <input type="text" id="city_name" class="form-control" placeholder="Enter city name" autocomplete="off" aria-label="Enter city name" aria-describedby="button-addon2">
+          <input type="text" id="cityName" class="form-control" placeholder="Enter city name" autocomplete="off" aria-label="Enter city name" aria-describedby="button-addon2">
           <div class="input-group-append">
-            <button class="btn btn-primary" type="button" id="submitBtn">Search</button>
+            <button class="btn btn-primary" type="button" id="submitBtn" value="search">Search</button>
           </div>
         </div>
       </div>
@@ -32,19 +33,29 @@
       </div>
       </div>
       <div class="row mt-5 text-center">
-        <p class="fs-1" id="city">Your Report</p>
-        <div class="middle_layer_data_hide">
-        <p class="fs-1" id="temp"> <span>0</span><sup>&#176;</sup></p>
-        <p id="temp_status">
-          <i class="fa fa-cloud"></i>
+        <div class="middle_layer ">
+        <p class="fs-1" id="city_name">Your Report</p>
+        <div class="d-flex justify-content-center gap-4">
+        <p class="fs-1"> <span  id="temp">0</span><sup>&#176;</sup>C</p>
+        <p>
+          <i id="temp_status" class="fa-solid fa-cloud fs-1"></i>
         </p>
+        </div>
         </div>
       </div>
     </div>
     </div>
   </div>
   {{>footer}}
+  <script>
+    let today_day = document.getElementById('day')
+    let today_date = document.getElementById('date')
+    today_day.innerHTML= moment().format('dddd'); 
+    today_date.innerHTML = moment().format('MMMM Do YYYY')
+
+  </script>
   <!-- jQuery and Bootstrap JS -->
+  <script src="js/info.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
