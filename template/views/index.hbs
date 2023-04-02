@@ -11,37 +11,7 @@
 
 <body>
     <!-- NavBar -->
-    <div class="container-fluid main_menu">
-        <div class="row">
-            <div class="col-md-10 col-12 mx-auto">
-                <nav class="navbar navbar-expand-lg ">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">SarcasForecast</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav m-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/weather">Weather</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/about">About US</a>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
+   {{>nav}}
     <!-- NavBar -->
     <!-- header -->
     <div class="container-fluid">
@@ -54,7 +24,7 @@
                         <p class="left-header-para">Welcome to our one-of-a-kind weather app! We know you're tired of boring weather forecasts
                             that sound like they were written by robots (well, they probably were). That's why we're
                             here to give you a fresh, sarcastic take on your local weather.</p>
-                        <button class="btn btn-left-header btn-primary">Freeze or Fry?</button>
+                        <a href="/weather" class="btn btn-left-header btn-primary">Freeze or Fry?</a>
                     </div>
                     <div class="col-md-6 col-12 mx-auto right_header">
                         <div class="imgBox justify-content-center">
@@ -117,13 +87,13 @@
                 <div class="row">
                     <div class="col-md-6 col-12 mx-auto right_header">
                         <div class="imgBox justify-content-center">
-                            <img class="img-fluid w-100 " src="images/report.jpg" alt="">
+                            <img class="img-fluid w-100 " src="images/weather-report.svg" alt="">
                         </div>
                     </div>
                     <div class="col-md-6 col-12 mx-auto left_header d-flex flex-column justify-content-center gap-4">
                         <h1 class="fs-4 text-center">Conquer the Weather, Conquer Your Destiny!</h1>
                         <p class="left-header-para fs-5 text-info">Attention all weather warriors! With our weather app, you can vanquish even the most treacherous weather foes with ease! No more surprise attacks from Mother Nature - our app provides accurate and up-to-date weather forecasts so you can plan your battles accordingly. And with our arsenal of weather emojis, you can unleash your true feelings and show them to the world! Whether you're facing a scorching hot summer or a bitter cold winter, our app has got your back. So don your battle gear, grab your trusty smartphone, and join the ranks of the weather warriors today!</p>
-                        <button class="btn btn-left-header btn-primary">Freeze or Fry?</button>
+                        <a href="/about" class="btn btn-left-header btn-primary">More About us</a>
                     </div>
                    
                 </div>
